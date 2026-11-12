@@ -26,7 +26,7 @@ See [TERMINOLOGY.md](TERMINOLOGY.md) for shared identifier, lifecycle, evidence,
 
 ```toml
 [dependencies]
-content-artifacts = { git = "https://github.com/nplongx/content-artifacts" }
+content-artifacts = { git = "https://github.com/nplongx/content-artifacts", tag = "v0.1.0" }
 ```
 
 ```rust
@@ -105,3 +105,8 @@ MIT. See [LICENSE](LICENSE).
 ## Compatibility identifiers
 
 The extraction preserves existing schema/media identifiers such as `application/vnd.runalith.artifact-manifest+json` and `runalith.execution-result`. These are serialized compatibility values; repository/package renaming does not silently rename the wire contract.
+
+
+## Version 1 compatibility identifiers
+
+Existing media types, schema IDs, and golden fixtures retain their historical serialized strings, including identifiers with an older product namespace. They are data-format compatibility values only. Changing them requires a new schema/media version and an explicit migration; they are not package names or runtime dependencies.

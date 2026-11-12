@@ -2,7 +2,7 @@
 
 ## 0.1.0 — 2026-11-12
 
-Initial standalone publication extracted from Runalith's `runalith-artifacts` crate at source revision `29c24cfa2b6ead5704d26cf2746bc384f2938b80`.
+Initial standalone package release from immutable source snapshot `29c24cfa2b6ead5704d26cf2746bc384f2938b80`.
 
 - Private filesystem-backed content-addressed artifact store.
 - Versioned artifact/source/lineage/manifest contracts and canonical manifest serialization.

@@ -1,32 +1,9 @@
-# Source Lineage
+# Provenance and independence
 
-## Upstream source
+This package was created from a source snapshot identified by revision `29c24cfa2b6ead5704d26cf2746bc384f2938b80`.
 
-- Repository: [nplongx/runalith](https://github.com/nplongx/runalith)
-- Original crate: `rust/crates/runalith-artifacts`
-- Source revision: [`29c24cfa2b6ead5704d26cf2746bc384f2938b80`](https://github.com/nplongx/runalith/tree/29c24cfa2b6ead5704d26cf2746bc384f2938b80/rust/crates/runalith-artifacts)
-- Upstream license: MIT
+The snapshot supplied content-addressed byte storage, artifact/source/lineage/manifest contracts, read observations, and deterministic fixtures. Stateful session registries and delivery queues are outside this package's scope.
 
-The original crate directory was clean at the extraction revision.
+The package contains no Git submodule, sibling-package dependency, workspace path dependency, SQLite session registry, remote service, or runtime host dependency. It builds and tests from this checkout without retrieving code from another repository.
 
-## Included
-
-- `src/lib.rs`: private content-addressed filesystem store and byte-integrity checks.
-- `src/contracts.rs`: artifact/source/lineage/manifest structures, plus session/ACL/delivery DTO schemas.
-- `src/read_port.rs`: read request/result/observation contracts and local read adapter.
-- Three golden-vector integration tests and their fixture files.
-
-The standalone package is named `content-artifacts` and imports as `content_artifacts`. Its manifest keeps the relevant direct versions/features but removes `rusqlite` and all internal workspace dependencies.
-
-## Excluded
-
-- `src/sessions.rs`: the SQLite session registry, ACL revision store, durable delivery queue, receipts, and expiry observation persistence. This is a separate stateful subsystem and was not needed by artifact storage, contracts, or the read port.
-- Any Runalith worker, provider, sandbox, transport, MCP, or trust-service implementation.
-
-## Preserved compatibility identifiers
-
-Wire/schema identifiers such as `application/vnd.runalith.artifact-manifest+json` and `runalith.execution-result` remain unchanged. These strings are data compatibility values; changing them would alter existing consumers.
-
-## Independence statement
-
-The new repository has no workspace path dependency, Git submodule, SQLite dependency, or runtime dependency on Runalith. Source attribution and MIT license terms are preserved.
+Historical media types and schema IDs remain exact compatibility values. They are serialized data identifiers, not external package dependencies.
