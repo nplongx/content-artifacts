@@ -7,6 +7,10 @@ Private content-addressed artifact storage, immutable artifact manifests, and ty
 
 > **Status:** `0.1.0`, initial standalone extraction. The API may change before `1.0.0`. The filesystem adapter is defense-in-depth local storage, not a hostile-process sandbox or a production security certification.
 
+## Terminology
+
+See [TERMINOLOGY.md](TERMINOLOGY.md) for shared identifier, lifecycle, evidence, time-unit, and compatibility conventions.
+
 ## Capabilities
 
 - Store exact bytes by SHA-256 content address (`sha256:<digest>`).
